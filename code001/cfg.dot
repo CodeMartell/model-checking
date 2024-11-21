@@ -1,0 +1,14 @@
+digraph ControlFlowGraph {
+    "Estado(loc1='L0', loc2='L0_p', lock=0, x=0)" -> "Estado(loc1='L1', loc2='L0_p', lock=1, x=0)";
+    "Estado(loc1='L0', loc2='L0_p', lock=0, x=0)" -> "Estado(loc1='L0', loc2='L1_p', lock=1, x=0)";
+    "Estado(loc1='L1', loc2='L0_p', lock=1, x=0)" -> "Estado(loc1='L2', loc2='L0_p', lock=1, x=1)";
+    "Estado(loc1='L0', loc2='L1_p', lock=1, x=0)" -> "Estado(loc1='L0', loc2='L2_p', lock=1, x=2)";
+    "Estado(loc1='L2', loc2='L0_p', lock=1, x=1)" -> "Estado(loc1='L3', loc2='L0_p', lock=0, x=1)";
+    "Estado(loc1='L0', loc2='L2_p', lock=1, x=2)" -> "Estado(loc1='L0', loc2='L3_p', lock=0, x=2)";
+    "Estado(loc1='L3', loc2='L0_p', lock=0, x=1)" -> "Estado(loc1='L3', loc2='L1_p', lock=1, x=1)";
+    "Estado(loc1='L0', loc2='L3_p', lock=0, x=2)" -> "Estado(loc1='L1', loc2='L3_p', lock=1, x=2)";
+    "Estado(loc1='L3', loc2='L1_p', lock=1, x=1)" -> "Estado(loc1='L3', loc2='L2_p', lock=1, x=2)";
+    "Estado(loc1='L1', loc2='L3_p', lock=1, x=2)" -> "Estado(loc1='L2', loc2='L3_p', lock=1, x=1)";
+    "Estado(loc1='L3', loc2='L2_p', lock=1, x=2)" -> "Estado(loc1='L3', loc2='L3_p', lock=0, x=2)";
+    "Estado(loc1='L2', loc2='L3_p', lock=1, x=1)" -> "Estado(loc1='L3', loc2='L3_p', lock=0, x=1)";
+}

@@ -1,0 +1,12 @@
+digraph ControlFlowGraph {
+	A [label=Start]
+	B [label=Condition]
+	C [label="True Branch"]
+	D [label="False Branch"]
+	E [label=End]
+	A -> B
+	B -> C [label=True]
+	B -> D [label=False]
+	C -> E
+	D -> E
+}
